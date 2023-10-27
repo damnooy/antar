@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz@6..12&display=swap" rel="stylesheet" />
+    <title>Antar</title>
+</head>
+
+<body>
+    <header id="about">
+        <nav>
+            <a href="./index.html" class="title">
+                <iconify-icon class="icon" icon="fa6-solid:car-side"></iconify-icon>
+                <strong>
+                    Antar
+                </strong>
+            </a>
+            <div class="container-menu">
+                <a href="#about" class="menu">About</a>
+                <a href="#content" class="menu">Why Us</a>
+                <a href="#second-content" class="menu">Testimonial</a>
+            </div>
+        </nav>
+        <div class="container-header">
+            <div>
+                <h1 class="sub-title">Pesan Travel Antar Kota Begitu Mudah</h1>
+                <p class="description">Antar dapat membantu kamu memesan tiket travel secara online dengan mudah. Cukup
+                    pilih destinasi
+                    tujuan
+                    kamu dan booking tiket segera!</p>
+                <a class="ticket" href="https://wa.me/628811760892">Book a Ticket</a>
+            </div>
+            <img class="car" src="./car.png" alt="">
+        </div>
+        <div class="background-form">
+            <form>
+                <div>
+                    <p>Pick Up Location</p>
+                    <select id="pickupLocation" class="col-form">
+                        <option disabled selected value="">-- Pilih Lokasi --</option>
+                        <option value="Jakarta Selatan">Jakarta Selatan</option>
+                        <option value="Jakarta Timur">Jakarta Timur</option>
+                        <option value="Jakarta Barat">Jakarta Barat</option>
+                        <option value="Jakarta Pusat">Jakarta Pusat</option>
+                        <option value="Jakarta Utara">Jakarta Utara</option>
+                    </select>
+                </div>
+                <div>
+                    <p>Return Location</p>
+                    <select id="returnLocation" class="col-form">
+                        <option disabled selected value="">-- Pilih Lokasi --</option>
+                        <option value="Jakarta Selatan">Jakarta Selatan</option>
+                        <option value="Jakarta Timur">Jakarta Timur</option>
+                        <option value="Jakarta Barat">Jakarta Barat</option>
+                        <option value="Jakarta Pusat">Jakarta Pusat</option>
+                        <option value="Jakarta Utara">Jakarta Utara</option>
+                    </select>
+                </div>
+                <div>
+                    <p>Pick Up Date</p>
+                    <input id="pickupDate" class="col-form" type="date">
+                </div>
+                <div>
+                    <p>Return Date</p>
+                    <input id="returnDate" class="col-form" type="date">
+                </div>
+                <div>
+                    <button type="button" onclick="bookNow()">Book Now</button>
+                </div>
+            </form>
+        </div>
+    </header>
+    <main>
+        <div id="content">Kenapa Memilih Antar?</div>
+        <article id="first">
+            <div class="card">
+                <img class="img-card" src="./why-1.png" alt="">
+                <h3>Mudah & Cepat</h3>
+                <p>Cukup pilih lokasi dan waktu yang bisa anda tentukan. Dalam 1x24 jam tim kami akan memprosesnya</p>
+            </div>
+            <div class="card">
+                <img class="img-card" src="./why-2.png" alt="">
+                <h3>Harga Terjangkau</h3>
+                <p>Antar menawarkan harga dan kualitas terbaik untuk para customernya. Rasakan sendiri dengan booking
+                    sekarang.</p>
+            </div>
+            <div class="card">
+                <img class="img-card" src="./why-3.png" alt="">
+                <h3>Satisfied Customer</h3>
+                <p>Ribuan orang telah mempercayakan perjalanannya kepada Antar. Kepuasan pelanggan adalah prioritas
+                    utama</p>
+            </div>
+        </article>
+        <div id="second-content">
+            <aside>
+                <img src="./photos.png" alt="">
+                <h1>1.000</h1>
+                <p>Orang Telah Memilih Antar</p>
+            </aside>
+            <article id="second">
+                <h2>Apa Kata Mereka?</h2>
+                <p id="text">Saya telah menggunakan layanan Antar selama bertahun-tahun, dan saya selalu terkesan dengan keandalan
+                    dan
+                    kenyamanan yang mereka tawarkan. Mereka membuat perjalanan antar kota begitu mudah dan efisien. Saya
+                    tidak bisa memilih layanan lain!</p>
+                <h4> - Adam H -</h4>
+            </article>
+        </div>
+    </main>
+
+    <footer>
+        <h5>Copyright 2023 - Antar by Adam</h5>
+    </footer>
+
+    <script>
+        function bookNow() {
+            const pickupLocation = document.getElementById("pickupLocation").value;
+            const returnLocation= document.getElementById("returnLocation").value;
+            const pickupDate = document.getElementById("pickupDate").value;
+            const returnDate = document.getElementById("returnDate").value;
+
+            window.location.href = `https://wa.me/628811760892?text=Halo saya ingin booking jasa Antar dari: ${pickupLocation} ke ${returnLocation} dari tanggal ${pickupDate} return tanggal ${returnDate}`
+        }
+    </script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+</body>
+
+</html>
